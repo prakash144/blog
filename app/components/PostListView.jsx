@@ -36,6 +36,33 @@ export function PostCard({ post }) {
                 <h5 className="text-xs text-gray-500">{post?.timestamp?.toDate()?.toLocaleDateString()}</h5>
             </div>
         </div>
+        {/* TODO: Remove later */}
+        <div className="flex flex-col gap-3 p-5 rounded">
+            <div className="relative">
+                <div className="absolute flex justify-end w-full p-3">
+                    <CategoryCard categoryId={post?.categoryId} />
+                </div>
+                <img className="h-[200px] w-full object-cover" src={post?.imageURL} alt="" />
+            </div>
+            <h1 className="font-bold">{post?.title}</h1>
+            <div className="flex justify-between">
+                <AuthorCard authorId={post?.authorId} />
+                <h5 className="text-xs text-gray-500">{post?.timestamp?.toDate()?.toLocaleDateString()}</h5>
+            </div>
+        </div>
+        <div className="flex flex-col gap-3 p-5 rounded">
+            <div className="relative">
+                <div className="absolute flex justify-end w-full p-3">
+                    <CategoryCard categoryId={post?.categoryId} />
+                </div>
+                <img className="h-[200px] w-full object-cover" src={post?.imageURL} alt="" />
+            </div>
+            <h1 className="font-bold">{post?.title}</h1>
+            <div className="flex justify-between">
+                <AuthorCard authorId={post?.authorId} />
+                <h5 className="text-xs text-gray-500">{post?.timestamp?.toDate()?.toLocaleDateString()}</h5>
+            </div>
+        </div>
     </Link>
 }
 
